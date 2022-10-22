@@ -1,0 +1,13 @@
+name: mlzoomcamp
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - seaborn
+  - jupyter
+  - scikit-learn==1.0.2
+  - flask
+  - gunicorn
+  - waitress
+prefix: /opt/anaconda3/envs/mlzoomcamp
