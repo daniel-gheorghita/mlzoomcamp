@@ -1,0 +1,1 @@
+Predict if song is [rock/alternative/metal] or other ([indie/hiphop/blues])

@@ -1,0 +1,5 @@
+channels:
+- conda-forge
+dependencies:
+- xgboost=1.6.2
+- pydantic=1.10.2
