@@ -17,7 +17,7 @@ Based on these features, the model predicts if the song is in one of the two cla
  - blues/hiphop/indie (output 0)
 
 ## Dataset 
-Use the dataset already in the raw\_data folder or download an updated version from [spotify-multigenre-playlists-data](https://www.kaggle.com/datasets/siropo/spotify-multigenre-playlists-data). Make sure to have only a set of CSV files (not multiple versions of the same dataset) in the raw\_data folder because the notebook will concatenate them all. 
+Use the dataset already in the raw\_data folder or download an updated version from [spotify-multigenre-playlists-data](https://www.kaggle.com/datasets/siropo/spotify-multigenre-playlists-data). Make sure to have only a set of CSV files (not multiple versions of the same dataset) in the raw\_data folder because the first cells of notebook.ipynb will concatenate them all into a single file (spotify_songs.csv) that will be stored in the data folder. Then another file will be created (spotify_songs_small.csv) with only a subset of the columns from the original file. Only this final output data file is used for training the model.   
 
 ## Development
 Install [Anaconda](https://www.anaconda.com/products/distribution).
