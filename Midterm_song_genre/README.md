@@ -3,7 +3,7 @@ This was made as a midterm project for the Machine Learning Engineering class ([
 
 ## Potential usage
 
-Can be used as a rough recommender system that suggests a class of music genres based on desired mood features (danceability/energy).
+Can be used as a rough recommender system that suggests a class of music genres based on desired audio-mood features (danceability/energy).
 
 ## Current status
 
@@ -41,6 +41,11 @@ python3 train.py
 
 The script exports a model using [BentoML](https://www.bentoml.com/). The model is then used in the service.py to be exposed as an API. 
 
+## Simple local serving (API available on http://0.0.0.0:3000 via Swagger UI) 
+```sh
+bentoml serve service:svc
+```
+
 ## Deployment
 Install [Docker](https://www.docker.com/).
 
@@ -51,7 +56,7 @@ Build the bento model (it uses the bentofile.yaml file):
 bentoml build
 ```
 
-Generate the Docker container:
+Generate the Docker container (adjust model name and tag based on the output of the previous command):
 ```sh
 bentoml containerize song_classifier:o4dx2rc2dsv6tjgr --platform linux/amd64
 ```
@@ -60,7 +65,7 @@ The generated contents (including the Dockerfile) for this particular model are 
 
 ### Locally
 
-Serve the model locally:
+Serve the model locally (adjust the name and tag of the image based on the previous command):
 ```sh
 docker run -it --rm -p 3000:3000 song_classifier:o4dx2rc2dsv6tjgr serve --production
 ```
@@ -85,12 +90,12 @@ Login on the Azure Container Registry (create one first in the Azure web console
 az acr login -n songgenre
 ```
 
-Change the tag of the docker image by adding the ACR name in front of it (use docker image ls for all the images available on your system):
+Change the tag of the docker image by adding the ACR name in front of it (use docker image ls for all the images available on your system to adjust this command based on the image name and tag for your setup):
 ```sh
 docker image tag 0ef8c7d239b2 songgenre.azurecr.io/song_classifier:o4dx2rc2dsv6tjgr
 ```
 
-Push the image to ACR:
+Push the image to ACR (adjust the name and tag for your setup):
 ```sh
 docker push songgenre.azurecr.io/song_classifier:o4dx2rc2dsv6tjgr
 ```
