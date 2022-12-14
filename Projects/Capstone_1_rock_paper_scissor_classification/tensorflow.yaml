@@ -1,0 +1,10 @@
+apiVersion: "serving.kserve.io/v1beta1"
+kind: "InferenceService"
+metadata:
+  name: "rock-paper-scissors"
+spec:
+  predictor:
+    model:
+      modelFormat:
+        name: tensorflow
+      storageUri: "https://mlzoomcamp.s3.eu-central-1.amazonaws.com/rock_paper_scissors_model/41"
