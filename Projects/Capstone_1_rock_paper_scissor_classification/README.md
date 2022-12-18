@@ -41,7 +41,9 @@ After running the experimentation section of the notebook, use the train.py scri
 python3 train.py
 ```
 
-The script exports a  [Tensorflow SavedModel](https://www.tensorflow.org/guide/saved_model) model (and checkpoints in the h5 format). The model folder needs to be packed in a zip archive and uploaded to an accessible URI (or via a local http server). There already is a model available on an [AWS S3 bucket](https://mlzoomcamp.s3.eu-central-1.amazonaws.com/rock_paper_scissors_model/rps-model-1.zip).
+The script exports a  [Tensorflow SavedModel](https://www.tensorflow.org/guide/saved_model) model (and checkpoints in the h5 format). The model folder needs to be named by a version number and packed in a zip archive and uploaded to an accessible URI (or via a local http server). There already is a model available on an [AWS S3 bucket](https://mlzoomcamp.s3.eu-central-1.amazonaws.com/rock_paper_scissors_model/rps-model-1.zip).
+
+Hint: before archiving, rename the folder containing the model to "1". Otherwise, the service URLs in "predict.py" and in the sample scripts below need to be changed to match the version folder name.
 
 ## Deployment (local)
 Install [Docker](https://www.docker.com/).
