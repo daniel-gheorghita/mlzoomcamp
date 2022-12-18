@@ -1,5 +1,5 @@
 # Rock-paper-scissors image classification (artificial dataset)
-This was made as the Capstone 1 project for the Machine Learning Engineering class ([mlzoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp)). Therefore, the model or the application itself are not particularly useful, rather it is a learning effort for the process of exploring the process behind creating and (locally) deploying a custom classification model.
+This was made as the Capstone 1 project for the Machine Learning Engineering class ([mlzoomcamp](https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp)). Therefore, the model or the application itself are not particularly useful, rather it is a learning effort for the process of exploring the process behind creating and (locally) deploying a custom classification model using Kubernetes/KServe.
 
 ## Potential usage
 
