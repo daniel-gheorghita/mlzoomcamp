@@ -19,7 +19,6 @@ spec:
       modelFormat:
         name: tensorflow
       storageUri: "https://mlzoomcamp.s3.eu-central-1.amazonaws.com/rock_paper_scissors_model/rps-model-1.zip"
-      #storageUri: "http://172.18.0.1:8000/rock_paper_scissors_model/rps-model-1.zip"
       resources:
         requests:
           cpu: 500m
