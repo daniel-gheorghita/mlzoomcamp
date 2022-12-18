@@ -133,7 +133,7 @@ More detailes can be found on the KServe [serving Tensorflow model](https://kser
 
 Running a transformer without publishing the image can be done:
 ```sh
-# python3 image_transformer.py --predictor_host=localhost:8080 --model_name=rock-paper-scissors --http_port=8081
+python3 image_transformer.py --predictor_host=localhost:8080 --model_name=rock-paper-scissors --http_port=8081
 ```
 
 Add the port-forwarding (the previous port-forwarding still needs to be running):
