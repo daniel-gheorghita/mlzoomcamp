@@ -3,8 +3,28 @@ kind: "InferenceService"
 metadata:
   name: "rock-paper-scissors"
 spec:
+  transformer:
+    containers:
+      - image: "danielghe/mlzoomcamp:rps_transformer"
+        name: user-container
+        resources:
+          requests:
+            cpu: 300m
+            memory: 512Mi
+          limits:
+            cpu: 500m
+            memory: 1Gi
   predictor:
     model:
       modelFormat:
         name: tensorflow
-      storageUri: "https://mlzoomcamp.s3.eu-central-1.amazonaws.com/rock_paper_scissors_model/41"
+      storageUri: "https://mlzoomcamp.s3.eu-central-1.amazonaws.com/rock_paper_scissors_model/rps-model-1.zip"
+      #storageUri: "http://172.18.0.1:8000/rock_paper_scissors_model/rps-model-1.zip"
+      resources:
+        requests:
+          cpu: 500m
+          memory: 512Mi
+        limits:
+          cpu: 1000m
+          memory: 512Mi
+
